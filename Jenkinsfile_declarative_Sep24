@@ -4,13 +4,13 @@ pipeline{
     maven 'maven3.9.9'
   }
   stages{
-    stage('1GitClone'){
+    stage('1.GitClone'){
       steps{
          sh  "echo cloning the latest app version"
          git 'https://github.com/LandmakTechnology/maven-web-application'        
       }
     } 
-    stage('2build'){
+    stage('2.mavenbuild'){
       steps{
          sh  "echo creating deployanle packages"
          sh  'mvn clean package'        
