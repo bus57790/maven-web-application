@@ -13,5 +13,12 @@ pipeline {
         }
       }
     }
+    stage('2.sonascan'){
+      steps {
+        withMaven(globalMavenSettingsConfig: '', jdk: 'jdk11', maven: 'maven', mavenSettingsConfig: '', traceability: true) {
+          sh 'mvn sonar:sonar'
+        }
+      }
+    }
   }
 }
