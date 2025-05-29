@@ -7,8 +7,10 @@ pipeline {
       }
     }
     stage('2.mavenBuild'){
-      withMaven(globalMavenSettingsConfig: '', jdk: 'jdk11', maven: 'maven', mavenSettingsConfig: '', traceability: true) {
-      sh 'mvn clean package'
+      steps {
+        withMaven(globalMavenSettingsConfig: '', jdk: 'jdk11', maven: 'maven', mavenSettingsConfig: '', traceability: true) {
+          sh 'mvn clean package'
+        }
       }
     }
   }
