@@ -48,5 +48,6 @@ pipeline {
       steps {
           deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat-admin', path: '', url: 'http://44.246.164.237:8080/')], contextPath: null, war: 'target/*war'
       }
-   }
+    }
+  }
 }
