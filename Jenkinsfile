@@ -32,7 +32,7 @@ pipeline {
         steps {
             withSonarQubeEnv('sonar-server'){ //the server we set up in System
                 sh '''
-                $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=dev-snapshot-pipline -Dsonar.projectKey=dev-snapshot-pipline \
+                $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=delta-pipleline -Dsonar.projectKey=delta-pipeline \
                 -Dsonar.java.binaries=target '''
             }
         }
