@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>BETECH Solutions Releases Nexus Repository</name>
-	      <url>http://172.31.33.250:8081/repository/delta-bts-releases/</url>
+	      <url>http://172.31.33.250:8081/repository/delta-pipeline-releases/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>BETECH Solutions Snapshot Nexus Repository </name>
-	      <url>http://172.31.33.250:8081/repository/delta-bts-snapshot/</url>
+	      <url>http://172.31.33.250:8081/repository/delta-pipeline-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
