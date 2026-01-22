@@ -44,6 +44,7 @@ pipeline {
                 sh 'mvn deploy'
             }
          }
+      }
       stage('7.Deploy to web server') {
         steps {
           deploy adapters: [tomcat9(alternativeDeploymentContext: '', credentialsId: 'tomcat-admin', path: '', url: 'http://192.168.1.198:8083/')], contextPath: null, war: 'target/*war'
