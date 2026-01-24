@@ -117,8 +117,8 @@
 				<version>3.11.0</version>
 				<configuration>
 					<release>17</release>
-					<source>${jdk.version}</source>
-					<target>${jdk.version}</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 
