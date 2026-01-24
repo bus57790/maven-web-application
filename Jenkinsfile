@@ -12,7 +12,7 @@ pipeline {
     }
     stage('2.Test'){
       steps {
-        withMaven(globalMavenSettingsConfig: '', jdk: 'jdk-1.8', maven: 'maven', mavenSettingsConfig: '', traceability: true) {
+        withMaven(globalMavenSettingsConfig: '', jdk: 'jdk-1.9', maven: 'maven', mavenSettingsConfig: '', traceability: true) {
           sh 'mvn test'
         }
       }
@@ -24,7 +24,7 @@ pipeline {
     }
     stage('4.Build'){
       steps {
-        withMaven(globalMavenSettingsConfig: '', jdk: 'jdk-1.8', maven: 'maven', mavenSettingsConfig: '', traceability: true) {
+        withMaven(globalMavenSettingsConfig: '', jdk: 'jdk-1.9', maven: 'maven', mavenSettingsConfig: '', traceability: true) {
           sh 'mvn clean package'
         }
       }
@@ -40,7 +40,7 @@ pipeline {
       }
       stage('6.Publish Artifacts') {
         steps {
-            withMaven(globalMavenSettingsConfig: '', jdk: 'jdk-1.8', maven: 'maven', mavenSettingsConfig: '', traceability: true) {
+            withMaven(globalMavenSettingsConfig: '', jdk: 'jdk-1.9', maven: 'maven', mavenSettingsConfig: '', traceability: true) {
                 sh 'mvn deploy'
             }
          }
