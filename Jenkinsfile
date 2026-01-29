@@ -1,6 +1,6 @@
 // webhook enable version 1.0
 pipeline {
-  agent any
+  agent { label 'slave-server' }
   environment {
         SCANNER_HOME= tool 'sonar-scanner'
     }
